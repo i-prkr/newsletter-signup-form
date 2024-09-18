@@ -1,0 +1,26 @@
+@use "../utils/mixins" as *;
+@use "../utils/colours" as *;
+
+.newsletter-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__error {
+    position: absolute;
+    transform: translateX(10rem);
+    visibility: hidden;
+  }
+
+  &__email-input {
+    @include form-element-shape;
+    margin-top: 0.5rem;
+    border: solid 1px $dark-slate-grey;
+
+    &-error {
+      @include form-error;
+      border-color: tomato;
+    }
+  }
+}

@@ -11,3 +11,4 @@ design/
 .vscode/
 dist/
 .parcel-cache/
+package*

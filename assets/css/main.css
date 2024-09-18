@@ -22,14 +22,13 @@ p,
 figure,
 blockquote,
 dl,
-dd,
-ul {
+dd {
   margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -89,3 +88,26 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+.card {
+  background-color: pink;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */

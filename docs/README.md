@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github]()
+- Solution URL: [Github](https://github.com/i-prkr/newsletter-signup-form)
 - Live Site URL: [Github Pages]()
 
 ## My process
@@ -49,14 +49,21 @@ Users should be able to:
 
 ### What I learned
 
+I was able to learn about FormData, a much simpler way to collect data from forms with the ability to do so in one line:
+
+`const userEmail = Object.fromEntries(new FormData(event.target)).userEmail;`
+
+I was also helpful in this challenge to continue improving on how I am planning out solutions particularly with the BEM methodology in mind.
+
 ### Continued development
+
+I am eager to continue improving how I am structuring my solutions to keep it as DRY as possible, particularly using BEM. I spent some time trying different ways to structure the `.card` sass and settled on keeping both the newsletter and success card styles under the one class.
 
 ### Useful resources
 
 https://css-tricks.com/snippets/css/css-triangle/
 
-- [Triangle in CSS](https://css-tricks.com/snippets/css/css-triangle/) - This helped me to create a CSS triangle for the bottom of the share bar when viewed on larger screens.
-- [MDN SVG](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started) - This helped with understanding SVG files and how to manipulate them for correct sizing and placement.
+- [BEM Methodology](https://en.bem.info/methodology/quick-start/#element) - This helped me as I continue to improve my BEM implementation.
 
 ## Author
 

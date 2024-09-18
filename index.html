@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Newsletter sign-up form</title>
+    <script src="./index.js" type="module" defer></script>
+    <link rel="stylesheet" href="./assets/sass/main.scss" />
+  </head>
+  <body class="page">
+    <!-- Newsletter form start -->
+    <article class="card show" id="signup-card">
+      <header><h1 class="sr-only">Newsletter form</h1></header>
+      <figure class="card__figure">
+        <picture class="card__image">
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 48rem)"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            width="375"
+            height="284"
+          />
+        </picture>
+      </figure>
+      <div class="card__body">
+        <h2 class="card_heading text-large">Stay updated!</h2>
+        <p class="card__copy">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="card__list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <footer class="card__footer">
+          <form class="newsletter-form" novalidate>
+            <label
+              class="newsletter-form__email-input-label text-small text-bold"
+              >Email address<br /><input
+                class="newsletter-form__email-input"
+                name="userEmail"
+                type="email"
+                placeholder="email@company.com" /></label
+            ><span
+              class="newsletter-form__error text-small text-bold text-error"
+              aria-live="polite"
+              >Error message</span
+            >
+            <button
+              class="button button-dark newsletter-form__button text-white text-bold"
+              type="submit"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </footer>
+      </div>
+    </article>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Newsletter form end -->
 
-  <!-- Sign-up form start -->
+    <!-- Success message start -->
 
-  Stay updated!
+    <article class="card card_success hide" id="success-card">
+      <div class="card_body card__body_success">
+        <figure class="card__figure card__figure_success">
+          <img src="./assets/images/icon-success.svg" alt="" />
+        </figure>
+        <h2 class="card__heading text-large">Thanks for subscribing!</h2>
+        <p class="card__copy">
+          A confirmation email has been sent to
+          <strong id="user-email-text">ash@loremcompany.com</strong>. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <footer class="card__footer">
+        <button class="button button-dark text-white text-bold">
+          Dismiss message
+        </button>
+      </footer>
+    </article>
 
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Success message end -->
+  </body>
 </html>

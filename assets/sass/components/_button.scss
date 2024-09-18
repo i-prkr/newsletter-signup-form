@@ -1,0 +1,14 @@
+@use "../utils/colours" as *;
+@use "../utils/mixins" as *;
+
+.button {
+  border-style: none;
+  @include form-element-shape;
+  &-dark {
+    background-color: $dark-slate-grey;
+  }
+
+  &:hover {
+    background: $tomato-gradient;
+  }
+}

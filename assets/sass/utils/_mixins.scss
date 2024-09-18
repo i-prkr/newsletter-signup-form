@@ -1,0 +1,33 @@
+@use "sass:color";
+
+@use "./breakpoints" as *;
+@use "./colours" as *;
+
+@mixin form-element-shape {
+  width: 100%;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+}
+
+@mixin form-error {
+  background-color: color.adjust($tomato, $alpha: -0.8);
+  color: $tomato;
+}
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
