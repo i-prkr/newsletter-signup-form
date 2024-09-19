@@ -9,7 +9,7 @@
 
   &__error {
     position: absolute;
-    transform: translateX(10rem);
+    transform: translateX(clamp(10rem, 6rem + 8vw, 16rem));
     visibility: hidden;
   }
 

@@ -1,4 +1,4 @@
-export const NewsletterForm = () => {
+const NewsletterForm = () => {
 
   // get elements
   const signupCard = document.getElementById("signup-card");
@@ -28,3 +28,5 @@ export const NewsletterForm = () => {
     }
   })
 }
+
+NewsletterForm();
