@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/i-prkr/newsletter-signup-form)
-- Live Site URL: [Github Pages]()
+- Live Site URL: [Github Pages](https://i-prkr.github.io/newsletter-signup-form/)
 
 ## My process
 

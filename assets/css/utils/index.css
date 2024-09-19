@@ -8,11 +8,11 @@
 }
 
 .show {
-  visibility: visible;
+  display: flex;
 }
 
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

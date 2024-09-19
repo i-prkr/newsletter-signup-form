@@ -1,3 +1,14 @@
-
+.page {
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #36384d;
+  position: relative;
+}
+@media (min-width: 48rem) {
+  .page {
+    display: grid;
+    place-items: center;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

@@ -22,7 +22,8 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul {
   margin: 0;
 }
 
@@ -89,8 +90,224 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+span,
+p,
+a,
+li,
+label,
+input,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto";
+  color: #242742;
+  line-height: 1.5;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.text-small {
+  font-size: 0.75rem;
+}
+.text-regular {
+  font-size: 1rem;
+}
+.text-large {
+  line-height: 1.1;
+  font-size: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .text-large {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 75rem) {
+  .text-large {
+    font-size: 3.5rem;
+  }
+}
+.text-white {
+  color: #ffffff;
+}
+.text-dark {
+  color: #242742;
+}
+.text-error {
+  color: #ff6155;
+}
+
 .card {
-  background-color: pink;
+  position: relative;
+  background-color: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+}
+.card_success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__image {
+  height: 100%;
+}
+.card__image > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 0 1rem 1rem;
+}
+@media (min-width: 48rem) {
+  .card__image > img {
+    height: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+    object-fit: cover;
+  }
+}
+@media (min-width: 48rem) {
+  .card__figure {
+    order: 2;
+  }
+}
+@media (min-width: 48rem) {
+  .card__figure_success {
+    order: 0;
+  }
+}
+.card__body {
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  height: 100%;
+}
+@media (min-width: 48rem) {
+  .card__body {
+    gap: 1.5rem;
+    padding-inline: 4rem;
+    order: 1;
+  }
+}
+.card__body_success {
+  padding: 1.5rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width: 48rem) {
+  .card__body_success {
+    max-width: 31.5rem;
+    padding: 3rem;
+    gap: 2rem;
+  }
+}
+.card__list {
+  list-style: none;
+}
+.card__list > li {
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+.card__list > li::before {
+  content: url("../images/icon-list.svg");
+  position: absolute;
+  left: -2.6rem;
+}
+@media (min-width: 48rem) {
+  .card__list > li {
+    margin-bottom: 1.2rem;
+  }
+}
+.card__footer {
+  padding-inline: 1.5rem;
+  padding-block-end: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.newsletter-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.newsletter-form__error {
+  position: absolute;
+  transform: translateX(10rem);
+  visibility: hidden;
+}
+.newsletter-form__email-input {
+  width: 100%;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  border: solid 1px #242742;
+}
+.newsletter-form__email-input-error {
+  background-color: rgba(255, 97, 85, 0.2);
+  color: #ff6155;
+  border-color: tomato;
+}
+
+.button {
+  border-style: none;
+  width: 100%;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+}
+.button-dark {
+  background-color: #242742;
+}
+.button:hover {
+  background: linear-gradient(#ff6a3a, #ff527b);
+}
+
+.page {
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #36384d;
+  position: relative;
+}
+@media (min-width: 48rem) {
+  .page {
+    display: grid;
+    place-items: center;
+  }
 }
 
 .sr-only {
@@ -103,11 +320,11 @@ textarea:not([rows]) {
 }
 
 .show {
-  visibility: visible;
+  display: flex;
 }
 
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
